@@ -3,69 +3,275 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>柚木さん | AIイラスト & うちの子ポートフォリオ</title>
-  <meta name="description" content="AIイラストとオリジナルキャラクター（うちの子）の作品アーカイブ。Kanon / Ray / Ciel / こゆき など。" />
-  <meta property="og:title" content="AIイラスト & うちの子ポートフォリオ" />
-  <meta property="og:description" content="作品アーカイブ／イベント告知／プロフィール／各SNSリンク。" />
+  <title>Yuzuki Atelier | AIイラスト & AI小説</title>
+  <meta name="description" content="AIイラストとAI小説のアーカイブサイト。オリジナルキャラクター（うちの子）を主役にした作品を展示・公開しています。" />
+  <meta property="og:title" content="Yuzuki Atelier | AIイラスト & AI小説" />
+  <meta property="og:description" content="AIイラストとAI小説のアーカイブ。Kanon / Ray / Ciel / こゆき など。" />
   <meta property="og:type" content="website" />
   <style>
-    :root{
-      --bg:#0b0b0f; --panel:#12121a; --ink:#eaeaf3; --muted:#a6a6bf; --accent:#7aa2ff; --accent-2:#ff77b7;
+    :root {
+      --bg:       #0b0b0f;
+      --panel:    #12121a;
+      --panel-2:  #0e0e14;
+      --ink:      #eaeaf3;
+      --muted:    #a6a6bf;
+      --accent:   #7aa2ff;
+      --accent-2: #ff77b7;
+      --accent-3: #5ef0c0;
+      --border:   #1d1d2a;
+      --border-2: #1f1f2b;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans JP, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .container{width:min(1100px,94vw);margin-inline:auto}
-    header{position:sticky;top:0;backdrop-filter: blur(8px);background:color-mix(in oklab, var(--bg) 70%, transparent);border-bottom:1px solid #1f1f2b;z-index:10}
-    nav{display:flex;align-items:center;justify-content:space-between;padding:10px 12px}
-    .logo{display:flex;align-items:center;gap:10px}
-    .logo-badge{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;font-weight:700}
-    .nav-links{display:flex;gap:14px;flex-wrap:wrap}
 
-    .hero{padding:56px 0 18px}
-    .hero h1{font-size:clamp(28px,4vw,40px);margin:0 0 6px}
-    .hero p{color:var(--muted);margin:0}
-    .cta{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
-    .btn{padding:10px 14px;border:1px solid #2a2a3a;border-radius:12px;background:linear-gradient(180deg,#191926,#12121a);color:var(--ink)}
-    .btn:hover{border-color:#3a3a52}
-    .btn.primary{background:linear-gradient(180deg,var(--accent),#3f63ff);border:none;color:#0a0a0a;font-weight:700}
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    section{padding:26px 0;border-top:1px solid #181826}
-    section h2{font-size:clamp(20px,3vw,28px);margin:0 0 12px}
-    .muted{color:var(--muted)}
+    html, body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans JP', Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
+      line-height: 1.6;
+    }
 
-    /* ギャラリー */
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
-    .card{grid-column:span 4;background:var(--panel);border:1px solid #1d1d2a;border-radius:16px;overflow:hidden}
-    @media (max-width:920px){.card{grid-column:span 6}}
-    @media (max-width:640px){.card{grid-column:span 12}}
-    .card img{width:100%;height:240px;object-fit:cover;background:#0e0e14}
-    .card figcaption{padding:10px 12px;color:var(--muted);font-size:14px}
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    /* キャラ */
-    .char{display:flex;gap:14px;align-items:center;padding:14px;border:1px solid #1d1d2a;border-radius:16px;background:linear-gradient(180deg,#12121a,#0e0e14)}
-    .char img{width:72px;height:72px;border-radius:12px;object-fit:cover;background:#0e0e14}
-    .chips{display:flex;gap:8px;flex-wrap:wrap}
-    .chip{font-size:12px;padding:6px 8px;border:1px solid #2a2a3a;border-radius:100px;color:var(--muted)}
+    .container { width: min(1100px, 94vw); margin-inline: auto; }
 
-    /* フッター */
-    footer{padding:28px 0;border-top:1px solid #181826;color:var(--muted);font-size:14px}
+    /* ── Header ── */
+    header {
+      position: sticky; top: 0;
+      backdrop-filter: blur(10px);
+      background: color-mix(in oklab, var(--bg) 72%, transparent);
+      border-bottom: 1px solid var(--border-2);
+      z-index: 100;
+    }
+    nav {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px; gap: 12px;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; }
+    .logo-badge {
+      width: 30px; height: 30px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      display: grid; place-items: center;
+      font-weight: 700; font-size: 15px; flex-shrink: 0;
+    }
+    .logo strong { font-size: 15px; }
+    .nav-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .nav-links a { font-size: 13px; color: var(--muted); }
+    .nav-links a:hover { color: var(--ink); text-decoration: none; }
 
-    /* アナウンス（R-18分離など） */
-    .notice{padding:12px;border:1px dashed #3a2a3a;border-radius:12px;background:color-mix(in oklab, var(--panel) 85%, #ffb1d5 15%);color:#ffdff0}
+    /* ── Layout ── */
+    section { padding: 36px 0; border-top: 1px solid #181826; }
+    section h2 { font-size: clamp(20px, 3vw, 28px); margin-bottom: 18px; }
+    .muted { color: var(--muted); }
+
+    /* ── Hero ── */
+    .hero { padding: 60px 0 36px; border-top: none; }
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 48px);
+      line-height: 1.2; margin-bottom: 12px;
+      background: linear-gradient(135deg, var(--ink) 40%, var(--accent));
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-sub { color: var(--muted); max-width: 520px; margin-bottom: 22px; }
+
+    .type-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 22px; }
+    .type-badge {
+      display: flex; align-items: center; gap: 7px;
+      padding: 7px 14px; border-radius: 100px;
+      border: 1px solid var(--border-2); font-size: 13px;
+    }
+    .type-badge.illust { border-color: color-mix(in oklab, var(--accent) 50%, transparent); }
+    .type-badge.novel  { border-color: color-mix(in oklab, var(--accent-3) 50%, transparent); }
+    .dot { width: 7px; height: 7px; border-radius: 50%; }
+    .dot-blue  { background: var(--accent); }
+    .dot-green { background: var(--accent-3); }
+
+    .cta { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      padding: 10px 18px; border: 1px solid #2a2a3a; border-radius: 12px;
+      background: linear-gradient(180deg, #191926, #12121a);
+      color: var(--ink); font-size: 14px; font-weight: 500;
+      cursor: pointer; display: inline-block;
+      transition: border-color 0.15s;
+    }
+    .btn:hover { border-color: #3a3a52; text-decoration: none; }
+    .btn.primary {
+      background: linear-gradient(180deg, var(--accent), #3f63ff);
+      border: none; color: #04040f; font-weight: 700;
+    }
+    .btn.primary-novel {
+      background: linear-gradient(180deg, var(--accent-3), #28c498);
+      border: none; color: #04040f; font-weight: 700;
+    }
+
+    .notice {
+      margin-top: 18px; padding: 12px 14px; border-radius: 12px;
+      border: 1px dashed #3a2a3a;
+      background: color-mix(in oklab, var(--panel) 82%, #ffb1d5 18%);
+      color: #ffdff0; font-size: 13px;
+    }
+
+    /* ── Stats Strip ── */
+    .stats-strip {
+      display: flex; gap: 0;
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 16px; overflow: hidden; margin-bottom: 10px;
+    }
+    .stat {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; padding: 18px 10px; gap: 2px;
+      border-right: 1px solid var(--border);
+    }
+    .stat:last-child { border-right: none; }
+    .stat-num { font-size: 30px; font-weight: 700; }
+    .stat-num.blue  { color: var(--accent); }
+    .stat-num.green { color: var(--accent-3); }
+    .stat-num.pink  { color: var(--accent-2); }
+    .stat-label { font-size: 11px; color: var(--muted); text-align: center; }
+
+    /* ── Filter Bar ── */
+    .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+    .filter-btn {
+      padding: 6px 14px; border-radius: 100px; font-size: 12px; cursor: pointer;
+      border: 1px solid var(--border); background: transparent;
+      color: var(--muted); transition: all 0.15s;
+    }
+    .filter-btn:hover { border-color: #3a3a52; color: var(--ink); }
+    .filter-btn.active.blue {
+      border-color: var(--accent); color: var(--accent);
+      background: color-mix(in oklab, var(--accent) 10%, transparent);
+    }
+    .filter-btn.active.green {
+      border-color: var(--accent-3); color: var(--accent-3);
+      background: color-mix(in oklab, var(--accent-3) 10%, transparent);
+    }
+
+    /* ── Illustration Grid ── */
+    .illust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 12px;
+    }
+    .illust-card {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 16px; overflow: hidden;
+      transition: transform 0.15s, border-color 0.15s;
+    }
+    .illust-card:hover { transform: translateY(-3px); border-color: #2c2c42; }
+    .illust-card figure { margin: 0; }
+    .illust-card img {
+      width: 100%; height: 220px; object-fit: cover;
+      background: var(--panel-2); display: block;
+    }
+    .card-body { padding: 10px 14px 14px; }
+    .card-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .card-meta { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+    .chips { display: flex; gap: 6px; flex-wrap: wrap; }
+    .chip {
+      font-size: 11px; padding: 3px 9px;
+      border: 1px solid var(--border); border-radius: 100px; color: var(--muted);
+    }
+    .chip.blue  { border-color: color-mix(in oklab, var(--accent) 45%, transparent); color: var(--accent); }
+    .chip.green { border-color: color-mix(in oklab, var(--accent-3) 45%, transparent); color: var(--accent-3); }
+    .chip.pink  { border-color: color-mix(in oklab, var(--accent-2) 45%, transparent); color: var(--accent-2); }
+
+    /* ── Novel Grid ── */
+    .novel-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 14px;
+    }
+    .novel-card {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 16px; padding: 20px;
+      display: flex; flex-direction: column; gap: 10px;
+      transition: transform 0.15s, border-color 0.15s;
+      position: relative; overflow: hidden;
+    }
+    .novel-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--accent-3), var(--accent));
+    }
+    .novel-card:hover { transform: translateY(-3px); border-color: #2c2c42; }
+    .novel-title { font-size: 18px; font-weight: 700; line-height: 1.3; }
+    .novel-genre { font-size: 12px; color: var(--muted); }
+    .novel-summary { font-size: 13px; color: var(--muted); line-height: 1.75; }
+    .novel-footer {
+      display: flex; align-items: center;
+      justify-content: space-between; margin-top: 4px;
+    }
+    .novel-stats { font-size: 12px; color: var(--muted); }
+    .read-btn {
+      padding: 6px 14px; border-radius: 8px; font-size: 13px; font-weight: 600;
+      background: color-mix(in oklab, var(--accent-3) 14%, transparent);
+      border: 1px solid color-mix(in oklab, var(--accent-3) 45%, transparent);
+      color: var(--accent-3); cursor: pointer; display: inline-block;
+      transition: background 0.15s;
+    }
+    .read-btn:hover { background: color-mix(in oklab, var(--accent-3) 22%, transparent); text-decoration: none; }
+
+    /* ── Characters ── */
+    .char-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 10px;
+    }
+    .char-card {
+      display: flex; gap: 14px; align-items: flex-start;
+      padding: 16px; border: 1px solid var(--border); border-radius: 16px;
+      background: linear-gradient(160deg, var(--panel), var(--panel-2));
+    }
+    .char-card img {
+      width: 72px; height: 72px; border-radius: 12px;
+      object-fit: cover; background: var(--panel-2); flex-shrink: 0;
+    }
+    .char-info h3 { font-size: 15px; margin-bottom: 4px; }
+    .char-info p { font-size: 12px; color: var(--muted); margin-bottom: 8px; }
+
+    /* ── About ── */
+    .about-body { color: var(--muted); max-width: 640px; line-height: 1.85; }
+
+    /* ── Contact ── */
+    .contact-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .contact-list li { color: var(--muted); font-size: 14px; }
+
+    /* ── Utility ── */
+    .section-lead { color: var(--muted); margin-top: -10px; margin-bottom: 20px; font-size: 14px; }
+    .hidden { display: none !important; }
+
+    /* ── Footer ── */
+    footer {
+      padding: 28px 0; border-top: 1px solid #181826;
+      color: var(--muted); font-size: 13px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .hero { padding: 36px 0 24px; }
+      .stats-strip { flex-direction: row; }
+      .stat { padding: 14px 8px; }
+      .stat-num { font-size: 22px; }
+      .nav-links { gap: 10px; }
+    }
   </style>
 </head>
 <body>
+
+  <!-- ── Header ── -->
   <header>
     <nav class="container">
       <div class="logo">
-        <div class="logo-badge" aria-hidden>＊</div>
+        <div class="logo-badge" aria-hidden>✦</div>
         <strong>Yuzuki Atelier</strong>
       </div>
       <div class="nav-links">
-        <a href="#gallery">Gallery</a>
-        <a href="#characters">Characters</a>
+        <a href="#illust">イラスト</a>
+        <a href="#novels">小説</a>
+        <a href="#characters">キャラ</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
@@ -73,108 +279,341 @@
   </header>
 
   <main class="container">
+
+    <!-- ── Hero ── -->
     <section class="hero" aria-label="Hero">
-      <h1>AIイラスト & うちの子アーカイブ</h1>
-      <p class="muted">Kanon / Ray / Ciel / こゆき — 日常×可愛い×ちょっと綺麗。イベント告知と各SNSへの導線もここから。</p>
+      <h1>AIイラスト & AI小説<br>アーカイブ</h1>
+      <p class="hero-sub">
+        オリジナルキャラクター（うちの子）を主役にしたAI生成作品のアーカイブ。<br>
+        イラストから小説まで、日常×可愛い×ちょっと綺麗な世界観。
+      </p>
+      <div class="type-badges">
+        <div class="type-badge illust"><span class="dot dot-blue"></span> AIイラスト</div>
+        <div class="type-badge novel"><span class="dot dot-green"></span> AI小説</div>
+      </div>
       <div class="cta">
-        <a class="btn primary" href="#gallery">最新作を見る</a>
-        <a class="btn" href="#characters">キャラ一覧へ</a>
+        <a class="btn primary" href="#illust">イラストを見る</a>
+        <a class="btn primary-novel" href="#novels">小説を読む</a>
+        <a class="btn" href="#characters">キャラ一覧</a>
       </div>
-      <div class="notice" style="margin-top:14px">
-        R-18作品は <strong>別ページ</strong> に分離予定。年齢確認を設置して安全に運用しましょう。
-      </div>
-    </section>
-
-    <section id="gallery" aria-label="Gallery">
-      <h2>Gallery <span class="muted">— 新着6点</span></h2>
-      <div class="grid" role="list">
-        <!-- 画像は /images に置いたファイル名へ差し替えてください -->
-        <figure class="card" role="listitem">
-          <img loading="lazy" alt="Kanon — 夕景ポートレート" src="./images/kanon.jpg" />
-          <figcaption>Kanon / 夕景ポートレート（#AIイラスト）</figcaption>
-        </figure>
-        <figure class="card" role="listitem">
-          <img loading="lazy" alt="Ray — モノトーン" src="./images/ray.jpg" />
-          <figcaption>Ray / モノトーンスタイル</figcaption>
-        </figure>
-        <figure class="card" role="listitem">
-          <img loading="lazy" alt="Ciel — 白ロリータ" src="./images/ciel.jpg" />
-          <figcaption>Ciel / 白ロリータ</figcaption>
-        </figure>
-        <figure class="card" role="listitem">
-          <img loading="lazy" alt="こゆき — きつね耳" src="./images/koyuki.jpg" />
-          <figcaption>こゆき / きつね耳</figcaption>
-        </figure>
-        <figure class="card" role="listitem">
-          <img loading="lazy" alt="Event Banner" src="./images/event.jpg" />
-          <figcaption>イベントバナー（#AIうちの子自慢大会）</figcaption>
-        </figure>
-        <figure class="card" role="listitem">
-          <img loading="lazy" alt="Logo or Mascot" src="./images/logo.jpg" />
-          <figcaption>ロゴ／看板キャラ</figcaption>
-        </figure>
+      <div class="notice">
+        R-18作品は <strong>別ページ</strong> に分離予定。年齢確認ページを設置して安全に運用しましょう。
       </div>
     </section>
 
-    <section id="characters" aria-label="Characters">
-      <h2>Characters <span class="muted">— 代表キャラ</span></h2>
-      <div class="grid">
-        <article class="char" style="grid-column:span 6">
+    <!-- ── Stats ── -->
+    <div class="stats-strip" aria-label="作品数">
+      <div class="stat">
+        <span class="stat-num blue" id="stat-illust">6</span>
+        <span class="stat-label">イラスト</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num green" id="stat-novel">4</span>
+        <span class="stat-label">小説</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num pink">4</span>
+        <span class="stat-label">キャラクター</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num" style="color:var(--ink)">49,500</span>
+        <span class="stat-label">累計文字数</span>
+      </div>
+    </div>
+
+    <!-- ── Illustrations ── -->
+    <section id="illust" aria-label="イラストギャラリー">
+      <h2>イラストギャラリー <span class="muted" style="font-size:0.65em;font-weight:400">— AI生成作品</span></h2>
+      <p class="section-lead">キャラクターやイベントのAIイラストをまとめています。</p>
+
+      <div class="filter-bar" id="illust-filters" role="group" aria-label="キャラクターフィルター">
+        <button class="filter-btn active blue" data-filter="all">すべて</button>
+        <button class="filter-btn blue" data-filter="kanon">Kanon</button>
+        <button class="filter-btn blue" data-filter="ray">Ray</button>
+        <button class="filter-btn blue" data-filter="ciel">Ciel</button>
+        <button class="filter-btn blue" data-filter="koyuki">こゆき</button>
+        <button class="filter-btn blue" data-filter="event">イベント</button>
+      </div>
+
+      <div class="illust-grid" id="illust-grid" role="list">
+
+        <div class="illust-card" data-tags="kanon" role="listitem">
+          <figure>
+            <img loading="lazy" alt="Kanon — 夕景ポートレート" src="./images/kanon.jpg" />
+          </figure>
+          <div class="card-body">
+            <p class="card-title">夕景ポートレート</p>
+            <p class="card-meta">Kanon &nbsp;/&nbsp; 2025-09</p>
+            <div class="chips">
+              <span class="chip blue">#Kanon</span>
+              <span class="chip">#ポートレート</span>
+              <span class="chip">#AIイラスト</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="illust-card" data-tags="ray" role="listitem">
+          <figure>
+            <img loading="lazy" alt="Ray — モノトーンスタイル" src="./images/ray.jpg" />
+          </figure>
+          <div class="card-body">
+            <p class="card-title">モノトーンスタイル</p>
+            <p class="card-meta">Ray &nbsp;/&nbsp; 2025-09</p>
+            <div class="chips">
+              <span class="chip blue">#Ray</span>
+              <span class="chip">#モノトーン</span>
+              <span class="chip">#AIイラスト</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="illust-card" data-tags="ciel" role="listitem">
+          <figure>
+            <img loading="lazy" alt="Ciel — 白ロリータ" src="./images/ciel.jpg" />
+          </figure>
+          <div class="card-body">
+            <p class="card-title">白ロリータ</p>
+            <p class="card-meta">Ciel &nbsp;/&nbsp; 2025-08</p>
+            <div class="chips">
+              <span class="chip blue">#Ciel</span>
+              <span class="chip">#ロリータ</span>
+              <span class="chip">#AIイラスト</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="illust-card" data-tags="koyuki" role="listitem">
+          <figure>
+            <img loading="lazy" alt="こゆき — きつね耳の日常" src="./images/koyuki.jpg" />
+          </figure>
+          <div class="card-body">
+            <p class="card-title">きつね耳の日常</p>
+            <p class="card-meta">こゆき &nbsp;/&nbsp; 2025-08</p>
+            <div class="chips">
+              <span class="chip blue">#こゆき</span>
+              <span class="chip">#狐耳</span>
+              <span class="chip">#大正風</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="illust-card" data-tags="event" role="listitem">
+          <figure>
+            <img loading="lazy" alt="AIうちの子自慢大会 イベントバナー" src="./images/event.jpg" />
+          </figure>
+          <div class="card-body">
+            <p class="card-title">AIうちの子自慢大会</p>
+            <p class="card-meta">イベントバナー &nbsp;/&nbsp; 2025-08</p>
+            <div class="chips">
+              <span class="chip">#イベント</span>
+              <span class="chip">#バナー</span>
+              <span class="chip">#AIイラスト</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="illust-card" data-tags="event" role="listitem">
+          <figure>
+            <img loading="lazy" alt="Yuzuki Atelier ロゴ & マスコット" src="./images/logo.jpg" />
+          </figure>
+          <div class="card-body">
+            <p class="card-title">看板キャラ & ロゴ</p>
+            <p class="card-meta">Yuzuki Atelier &nbsp;/&nbsp; 2025-07</p>
+            <div class="chips">
+              <span class="chip">#ロゴ</span>
+              <span class="chip">#マスコット</span>
+              <span class="chip">#AIイラスト</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Novels ── -->
+    <section id="novels" aria-label="AI小説">
+      <h2>AI小説 <span class="muted" style="font-size:0.65em;font-weight:400">— オリジナルストーリー</span></h2>
+      <p class="section-lead">キャラクターたちを主役にしたAI生成小説の一覧です。ジャンルで絞り込めます。</p>
+
+      <div class="filter-bar" id="novel-filters" role="group" aria-label="ジャンルフィルター">
+        <button class="filter-btn active green" data-filter="all">すべて</button>
+        <button class="filter-btn green" data-filter="fantasy">ファンタジー</button>
+        <button class="filter-btn green" data-filter="daily">日常</button>
+        <button class="filter-btn green" data-filter="romance">恋愛</button>
+        <button class="filter-btn green" data-filter="mystery">ミステリー</button>
+      </div>
+
+      <div class="novel-grid" id="novel-grid">
+
+        <article class="novel-card" data-tags="fantasy romance">
+          <h3 class="novel-title">月光の約束</h3>
+          <p class="novel-genre">ファンタジー・恋愛 &nbsp;/&nbsp; 2025-09</p>
+          <div class="chips">
+            <span class="chip green">#ファンタジー</span>
+            <span class="chip green">#恋愛</span>
+            <span class="chip">#Kanon</span>
+            <span class="chip">#Ray</span>
+          </div>
+          <p class="novel-summary">
+            銀色の月が照らす古城で、カノンとレイは再会する。幼い頃に交わした約束の意味を、
+            ふたりはようやく知ることになる——。
+          </p>
+          <div class="novel-footer">
+            <span class="novel-stats">全3話 &nbsp;/&nbsp; 約12,000字</span>
+            <a href="#" class="read-btn">読む →</a>
+          </div>
+        </article>
+
+        <article class="novel-card" data-tags="daily">
+          <h3 class="novel-title">お屋敷の午後</h3>
+          <p class="novel-genre">日常 &nbsp;/&nbsp; 2025-08</p>
+          <div class="chips">
+            <span class="chip green">#日常</span>
+            <span class="chip">#Ciel</span>
+            <span class="chip">#ほっこり</span>
+          </div>
+          <p class="novel-summary">
+            シエルのお屋敷での穏やかな午後。紅茶の香りと窓から差し込む光の中で、
+            静かで柔らかな時間が流れていく。
+          </p>
+          <div class="novel-footer">
+            <span class="novel-stats">短編 &nbsp;/&nbsp; 約4,500字</span>
+            <a href="#" class="read-btn">読む →</a>
+          </div>
+        </article>
+
+        <article class="novel-card" data-tags="fantasy daily">
+          <h3 class="novel-title">大正の狐嫁</h3>
+          <p class="novel-genre">大正風ファンタジー・日常 &nbsp;/&nbsp; 2025-08</p>
+          <div class="chips">
+            <span class="chip green">#ファンタジー</span>
+            <span class="chip green">#日常</span>
+            <span class="chip">#こゆき</span>
+            <span class="chip">#大正風</span>
+          </div>
+          <p class="novel-summary">
+            だんなさまのために用意したお弁当は、ちょっぴり不器用だけれど愛情いっぱい。
+            こゆきのほのぼの大正ライフ、全5話。
+          </p>
+          <div class="novel-footer">
+            <span class="novel-stats">全5話 &nbsp;/&nbsp; 約18,000字</span>
+            <a href="#" class="read-btn">読む →</a>
+          </div>
+        </article>
+
+        <article class="novel-card" data-tags="mystery romance">
+          <h3 class="novel-title">モノクロームの記憶</h3>
+          <p class="novel-genre">ミステリー・恋愛 &nbsp;/&nbsp; 2025-07</p>
+          <div class="chips">
+            <span class="chip green">#ミステリー</span>
+            <span class="chip green">#恋愛</span>
+            <span class="chip">#Ray</span>
+          </div>
+          <p class="novel-summary">
+            失われた記憶、残された写真。白黒の世界に生きるレイが追う真実とは何か。
+            静かで切ない全4話。
+          </p>
+          <div class="novel-footer">
+            <span class="novel-stats">全4話 &nbsp;/&nbsp; 約15,000字</span>
+            <a href="#" class="read-btn">読む →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ── Characters ── -->
+    <section id="characters" aria-label="キャラクター一覧">
+      <h2>Characters <span class="muted" style="font-size:0.65em;font-weight:400">— 代表キャラ</span></h2>
+      <p class="section-lead">作品に登場するオリジナルキャラクターたちです。</p>
+
+      <div class="char-grid">
+
+        <article class="char-card">
           <img alt="Kanon" src="./images/kanon-face.jpg" />
-          <div>
-            <h3 style="margin:0 0 6px">Kanon（カノン）</h3>
-            <p class="muted" style="margin:0 0 10px">銀髪×赤瞳／ゆる日常。看板キャラ。やさしい雰囲気で皆を翻弄。</p>
+          <div class="char-info">
+            <h3>Kanon（カノン）</h3>
+            <p>銀髪×赤瞳。看板キャラ。やさしい雰囲気で皆を翻弄する不思議な女の子。</p>
             <div class="chips">
-              <span class="chip">#看板</span><span class="chip">#日常</span><span class="chip">#可愛い</span>
+              <span class="chip">#看板</span>
+              <span class="chip">#日常</span>
+              <span class="chip">#可愛い</span>
             </div>
           </div>
         </article>
-        <article class="char" style="grid-column:span 6">
+
+        <article class="char-card">
           <img alt="Ray" src="./images/ray-face.jpg" />
-          <div>
-            <h3 style="margin:0 0 6px">Ray（レイ）</h3>
-            <p class="muted" style="margin:0 0 10px">カノンの幼なじみ。振り回されがち。モノトーンが似合う。</p>
+          <div class="char-info">
+            <h3>Ray（レイ）</h3>
+            <p>カノンの幼なじみ。振り回されがち。モノトーンが似合う静かな少年。</p>
             <div class="chips">
-              <span class="chip">#幼なじみ</span><span class="chip">#静か</span>
+              <span class="chip">#幼なじみ</span>
+              <span class="chip">#静か</span>
+              <span class="chip">#モノトーン</span>
             </div>
           </div>
         </article>
-        <article class="char" style="grid-column:span 6">
+
+        <article class="char-card">
           <img alt="Ciel" src="./images/ciel-face.jpg" />
-          <div>
-            <h3 style="margin:0 0 6px">Ciel（シエル）</h3>
-            <p class="muted" style="margin:0 0 10px">白ロリータ／お屋敷暮らし。静かで上品。</p>
+          <div class="char-info">
+            <h3>Ciel（シエル）</h3>
+            <p>白ロリータ。お屋敷暮らし。静かで上品、でも内に熱を秘めている。</p>
             <div class="chips">
-              <span class="chip">#白ロリ</span><span class="chip">#上品</span>
+              <span class="chip">#白ロリ</span>
+              <span class="chip">#上品</span>
+              <span class="chip">#お嬢様</span>
             </div>
           </div>
         </article>
-        <article class="char" style="grid-column:span 6">
+
+        <article class="char-card">
           <img alt="こゆき" src="./images/koyuki-face.jpg" />
-          <div>
-            <h3 style="margin:0 0 6px">こゆき</h3>
-            <p class="muted" style="margin:0 0 10px">狐の子。だんなさま大好き。大正風ファンタジー。</p>
+          <div class="char-info">
+            <h3>こゆき</h3>
+            <p>狐の子。だんなさまが大好き。大正風ファンタジー世界に生きる和風美人。</p>
             <div class="chips">
-              <span class="chip">#狐耳</span><span class="chip">#大正風</span>
+              <span class="chip">#狐耳</span>
+              <span class="chip">#大正風</span>
+              <span class="chip">#和風</span>
             </div>
           </div>
         </article>
+
       </div>
     </section>
 
+    <!-- ── About ── -->
     <section id="about" aria-label="About">
       <h2>About</h2>
-      <p class="muted">AIイラストと物語の創作を中心に活動。Xで毎朝の挨拶ポストと夜の投稿を継続中。イベント運営（例：#AIうちの子自慢大会）やロゴ制作、LINEスタンプ制作にも取り組んでいます。</p>
+      <div class="about-body">
+        <p>
+          AIイラストとAI小説の創作を中心に活動。オリジナルキャラクター（うちの子）を主役に、
+          日常・ファンタジー・恋愛・ミステリーなどさまざまなジャンルの作品を制作しています。
+        </p>
+        <br />
+        <p>
+          Xで毎朝の挨拶ポストと夜の投稿を継続中。イベント運営（例：#AIうちの子自慢大会）、
+          ロゴ制作、LINEスタンプ制作にも取り組んでいます。
+        </p>
+        <br />
+        <p>
+          作品への感想・ファンアートなどは大歓迎です。二次創作ガイドラインは Contact のリンクをご確認ください。
+        </p>
+      </div>
     </section>
 
-    <section id="contact" aria-label="Contact">
+    <!-- ── Contact ── -->
+    <section id="contact" aria-label="Contact & Links">
       <h2>Contact & Links</h2>
-      <ul>
+      <ul class="contact-list">
         <li>X（Twitter）：<a href="#">@your_handle</a></li>
         <li>メール：<a href="mailto:you@example.com">you@example.com</a></li>
-        <li>依頼ポリシー・クレジット表記：<a href="#">Guideline</a></li>
+        <li>二次創作ガイドライン・クレジット表記：<a href="#">Guideline</a></li>
       </ul>
     </section>
+
   </main>
 
   <footer>
@@ -184,7 +623,43 @@
   </footer>
 
   <script>
+    // Copyright year
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    // ── Illustration filter ──
+    const illustFilters = document.getElementById('illust-filters');
+    const illustCards   = [...document.querySelectorAll('#illust-grid .illust-card')];
+    const statIllust    = document.getElementById('stat-illust');
+
+    illustFilters.addEventListener('click', e => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      illustFilters.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      illustCards.forEach(c => {
+        c.classList.toggle('hidden', f !== 'all' && !c.dataset.tags.split(' ').includes(f));
+      });
+      statIllust.textContent = illustCards.filter(c => !c.classList.contains('hidden')).length;
+    });
+
+    // ── Novel filter ──
+    const novelFilters = document.getElementById('novel-filters');
+    const novelCards   = [...document.querySelectorAll('#novel-grid .novel-card')];
+    const statNovel    = document.getElementById('stat-novel');
+
+    novelFilters.addEventListener('click', e => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      novelFilters.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      novelCards.forEach(c => {
+        c.classList.toggle('hidden', f !== 'all' && !c.dataset.tags.split(' ').includes(f));
+      });
+      statNovel.textContent = novelCards.filter(c => !c.classList.contains('hidden')).length;
+    });
   </script>
+
 </body>
 </html>
