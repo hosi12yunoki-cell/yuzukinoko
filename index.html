@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>柚木さん | AIイラスト & うちの子ポートフォリオ</title>
+  <meta name="description" content="AIイラストとオリジナルキャラクター（うちの子）の作品アーカイブ。Kanon / Ray / Ciel / こゆき など。" />
+  <meta property="og:title" content="AIイラスト & うちの子ポートフォリオ" />
+  <meta property="og:description" content="作品アーカイブ／イベント告知／プロフィール／各SNSリンク。" />
+  <meta property="og:type" content="website" />
+  <style>
+    :root{
+      --bg:#0b0b0f; --panel:#12121a; --ink:#eaeaf3; --muted:#a6a6bf; --accent:#7aa2ff; --accent-2:#ff77b7;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family: system-ui, -apple-system, Segoe UI, Roboto, Noto Sans JP, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:min(1100px,94vw);margin-inline:auto}
+    header{position:sticky;top:0;backdrop-filter: blur(8px);background:color-mix(in oklab, var(--bg) 70%, transparent);border-bottom:1px solid #1f1f2b;z-index:10}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:10px 12px}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo-badge{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:grid;place-items:center;font-weight:700}
+    .nav-links{display:flex;gap:14px;flex-wrap:wrap}
+
+    .hero{padding:56px 0 18px}
+    .hero h1{font-size:clamp(28px,4vw,40px);margin:0 0 6px}
+    .hero p{color:var(--muted);margin:0}
+    .cta{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
+    .btn{padding:10px 14px;border:1px solid #2a2a3a;border-radius:12px;background:linear-gradient(180deg,#191926,#12121a);color:var(--ink)}
+    .btn:hover{border-color:#3a3a52}
+    .btn.primary{background:linear-gradient(180deg,var(--accent),#3f63ff);border:none;color:#0a0a0a;font-weight:700}
+
+    section{padding:26px 0;border-top:1px solid #181826}
+    section h2{font-size:clamp(20px,3vw,28px);margin:0 0 12px}
+    .muted{color:var(--muted)}
+
+    /* ギャラリー */
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
+    .card{grid-column:span 4;background:var(--panel);border:1px solid #1d1d2a;border-radius:16px;overflow:hidden}
+    @media (max-width:920px){.card{grid-column:span 6}}
+    @media (max-width:640px){.card{grid-column:span 12}}
+    .card img{width:100%;height:240px;object-fit:cover;background:#0e0e14}
+    .card figcaption{padding:10px 12px;color:var(--muted);font-size:14px}
+
+    /* キャラ */
+    .char{display:flex;gap:14px;align-items:center;padding:14px;border:1px solid #1d1d2a;border-radius:16px;background:linear-gradient(180deg,#12121a,#0e0e14)}
+    .char img{width:72px;height:72px;border-radius:12px;object-fit:cover;background:#0e0e14}
+    .chips{display:flex;gap:8px;flex-wrap:wrap}
+    .chip{font-size:12px;padding:6px 8px;border:1px solid #2a2a3a;border-radius:100px;color:var(--muted)}
+
+    /* フッター */
+    footer{padding:28px 0;border-top:1px solid #181826;color:var(--muted);font-size:14px}
+
+    /* アナウンス（R-18分離など） */
+    .notice{padding:12px;border:1px dashed #3a2a3a;border-radius:12px;background:color-mix(in oklab, var(--panel) 85%, #ffb1d5 15%);color:#ffdff0}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <div class="logo">
+        <div class="logo-badge" aria-hidden>＊</div>
+        <strong>Yuzuki Atelier</strong>
+      </div>
+      <div class="nav-links">
+        <a href="#gallery">Gallery</a>
+        <a href="#characters">Characters</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-label="Hero">
+      <h1>AIイラスト & うちの子アーカイブ</h1>
+      <p class="muted">Kanon / Ray / Ciel / こゆき — 日常×可愛い×ちょっと綺麗。イベント告知と各SNSへの導線もここから。</p>
+      <div class="cta">
+        <a class="btn primary" href="#gallery">最新作を見る</a>
+        <a class="btn" href="#characters">キャラ一覧へ</a>
+      </div>
+      <div class="notice" style="margin-top:14px">
+        R-18作品は <strong>別ページ</strong> に分離予定。年齢確認を設置して安全に運用しましょう。
+      </div>
+    </section>
+
+    <section id="gallery" aria-label="Gallery">
+      <h2>Gallery <span class="muted">— 新着6点</span></h2>
+      <div class="grid" role="list">
+        <!-- 画像は /images に置いたファイル名へ差し替えてください -->
+        <figure class="card" role="listitem">
+          <img loading="lazy" alt="Kanon — 夕景ポートレート" src="./images/kanon.jpg" />
+          <figcaption>Kanon / 夕景ポートレート（#AIイラスト）</figcaption>
+        </figure>
+        <figure class="card" role="listitem">
+          <img loading="lazy" alt="Ray — モノトーン" src="./images/ray.jpg" />
+          <figcaption>Ray / モノトーンスタイル</figcaption>
+        </figure>
+        <figure class="card" role="listitem">
+          <img loading="lazy" alt="Ciel — 白ロリータ" src="./images/ciel.jpg" />
+          <figcaption>Ciel / 白ロリータ</figcaption>
+        </figure>
+        <figure class="card" role="listitem">
+          <img loading="lazy" alt="こゆき — きつね耳" src="./images/koyuki.jpg" />
+          <figcaption>こゆき / きつね耳</figcaption>
+        </figure>
+        <figure class="card" role="listitem">
+          <img loading="lazy" alt="Event Banner" src="./images/event.jpg" />
+          <figcaption>イベントバナー（#AIうちの子自慢大会）</figcaption>
+        </figure>
+        <figure class="card" role="listitem">
+          <img loading="lazy" alt="Logo or Mascot" src="./images/logo.jpg" />
+          <figcaption>ロゴ／看板キャラ</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="characters" aria-label="Characters">
+      <h2>Characters <span class="muted">— 代表キャラ</span></h2>
+      <div class="grid">
+        <article class="char" style="grid-column:span 6">
+          <img alt="Kanon" src="./images/kanon-face.jpg" />
+          <div>
+            <h3 style="margin:0 0 6px">Kanon（カノン）</h3>
+            <p class="muted" style="margin:0 0 10px">銀髪×赤瞳／ゆる日常。看板キャラ。やさしい雰囲気で皆を翻弄。</p>
+            <div class="chips">
+              <span class="chip">#看板</span><span class="chip">#日常</span><span class="chip">#可愛い</span>
+            </div>
+          </div>
+        </article>
+        <article class="char" style="grid-column:span 6">
+          <img alt="Ray" src="./images/ray-face.jpg" />
+          <div>
+            <h3 style="margin:0 0 6px">Ray（レイ）</h3>
+            <p class="muted" style="margin:0 0 10px">カノンの幼なじみ。振り回されがち。モノトーンが似合う。</p>
+            <div class="chips">
+              <span class="chip">#幼なじみ</span><span class="chip">#静か</span>
+            </div>
+          </div>
+        </article>
+        <article class="char" style="grid-column:span 6">
+          <img alt="Ciel" src="./images/ciel-face.jpg" />
+          <div>
+            <h3 style="margin:0 0 6px">Ciel（シエル）</h3>
+            <p class="muted" style="margin:0 0 10px">白ロリータ／お屋敷暮らし。静かで上品。</p>
+            <div class="chips">
+              <span class="chip">#白ロリ</span><span class="chip">#上品</span>
+            </div>
+          </div>
+        </article>
+        <article class="char" style="grid-column:span 6">
+          <img alt="こゆき" src="./images/koyuki-face.jpg" />
+          <div>
+            <h3 style="margin:0 0 6px">こゆき</h3>
+            <p class="muted" style="margin:0 0 10px">狐の子。だんなさま大好き。大正風ファンタジー。</p>
+            <div class="chips">
+              <span class="chip">#狐耳</span><span class="chip">#大正風</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" aria-label="About">
+      <h2>About</h2>
+      <p class="muted">AIイラストと物語の創作を中心に活動。Xで毎朝の挨拶ポストと夜の投稿を継続中。イベント運営（例：#AIうちの子自慢大会）やロゴ制作、LINEスタンプ制作にも取り組んでいます。</p>
+    </section>
+
+    <section id="contact" aria-label="Contact">
+      <h2>Contact & Links</h2>
+      <ul>
+        <li>X（Twitter）：<a href="#">@your_handle</a></li>
+        <li>メール：<a href="mailto:you@example.com">you@example.com</a></li>
+        <li>依頼ポリシー・クレジット表記：<a href="#">Guideline</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="muted">© <span id="y"></span> Yuzuki Atelier — All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
