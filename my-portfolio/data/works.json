@@ -1,0 +1,101 @@
+[
+  {
+    "id": "w01",
+    "title": "Kanon — 夕景ポートレート",
+    "genre": "portrait",
+    "genreLabel": "ポートレート",
+    "tags": ["Kanon", "夕景", "AIイラスト"],
+    "image": "/images/kanon.jpg",
+    "aspectRatio": "tall",
+    "date": "2025-11-01",
+    "description": "夕暮れの光を浴びた看板キャラ・カノンのポートレート。柔らかなオレンジと銀髪のコントラストを意識しました。"
+  },
+  {
+    "id": "w02",
+    "title": "Ray — モノトーンスタイル",
+    "genre": "portrait",
+    "genreLabel": "ポートレート",
+    "tags": ["Ray", "モノトーン", "AIイラスト"],
+    "image": "/images/ray.jpg",
+    "aspectRatio": "square",
+    "date": "2025-11-08",
+    "description": "静かで落ち着いたレイの世界観をモノトーンで表現。"
+  },
+  {
+    "id": "w03",
+    "title": "Ciel — 白ロリータ",
+    "genre": "fashion",
+    "genreLabel": "ファッション",
+    "tags": ["Ciel", "ロリータ", "AIイラスト"],
+    "image": "/images/ciel.jpg",
+    "aspectRatio": "tall",
+    "date": "2025-11-15",
+    "description": "お屋敷の庭に佇むシエルの白いロリータドレス。上品で静謐な雰囲気。"
+  },
+  {
+    "id": "w04",
+    "title": "こゆき — きつね耳",
+    "genre": "fantasy",
+    "genreLabel": "ファンタジー",
+    "tags": ["こゆき", "狐耳", "大正風"],
+    "image": "/images/koyuki.jpg",
+    "aspectRatio": "wide",
+    "date": "2025-11-22",
+    "description": "大正風ファンタジーの世界で愛らしく佇むこゆき。着物と狐耳のバランスにこだわりました。"
+  },
+  {
+    "id": "w05",
+    "title": "#AIうちの子自慢大会 バナー",
+    "genre": "event",
+    "genreLabel": "イベント",
+    "tags": ["イベント", "バナー", "AI"],
+    "image": "/images/event.jpg",
+    "aspectRatio": "wide",
+    "date": "2025-12-01",
+    "description": "主催イベント「AIうちの子自慢大会」の公式バナー。賑やかで華やかな雰囲気を目指しました。"
+  },
+  {
+    "id": "w06",
+    "title": "Yuzuki Atelier ロゴ",
+    "genre": "design",
+    "genreLabel": "デザイン",
+    "tags": ["ロゴ", "デザイン"],
+    "image": "/images/logo.jpg",
+    "aspectRatio": "square",
+    "date": "2025-12-05",
+    "description": "アトリエの看板ロゴ。シンプルかつ可愛いデザインを意識。"
+  },
+  {
+    "id": "w07",
+    "title": "Kanon & Ray — 春の散歩",
+    "genre": "scene",
+    "genreLabel": "シーン",
+    "tags": ["Kanon", "Ray", "シーン", "春"],
+    "image": "/images/kanon.jpg",
+    "aspectRatio": "tall",
+    "date": "2025-12-10",
+    "description": "桜が舞い散る公園を並んで歩くカノンとレイ。二人の関係をほんのりと感じさせる構図。"
+  },
+  {
+    "id": "w08",
+    "title": "Ciel — 読書の午後",
+    "genre": "scene",
+    "genreLabel": "シーン",
+    "tags": ["Ciel", "日常", "シーン"],
+    "image": "/images/ciel.jpg",
+    "aspectRatio": "square",
+    "date": "2025-12-18",
+    "description": "窓辺で本を読むシエル。差し込む光と白いドレスが美しい。"
+  },
+  {
+    "id": "w09",
+    "title": "こゆき — お正月",
+    "genre": "fantasy",
+    "genreLabel": "ファンタジー",
+    "tags": ["こゆき", "お正月", "着物"],
+    "image": "/images/koyuki.jpg",
+    "aspectRatio": "tall",
+    "date": "2026-01-01",
+    "description": "新年のお祝いに特別な着物をまとったこゆき。おめでたい紅白の配色。"
+  }
+]

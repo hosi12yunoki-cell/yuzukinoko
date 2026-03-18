@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-zen: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+  --font-cormorant: "Cormorant Garamond", Georgia, serif;
+
+  --color-pink-blush:    #fff0f4;
+  --color-pink-light:    #ffd6e3;
+  --color-pink-mid:      #ffaac8;
+  --color-pink-main:     #f472b6;
+  --color-pink-deep:     #db2777;
+  --color-rose-card:     #fff5f8;
+  --color-accent-coral:  #fb7185;
+  --color-accent-lilac:  #c084fc;
+  --color-accent-mint:   #34d399;
+  --color-text-main:     #3d1a2e;
+  --color-text-muted:    #9c6b80;
+  --color-border:        #fcd5e3;
+}
+
+body {
+  font-family: "Zen Maru Gothic", "Noto Sans JP", sans-serif;
+  background-color: #fff0f4;
+  color: #3d1a2e;
+}
+
+/* Masonry layout via CSS columns */
+.masonry-grid {
+  columns: 1;
+  column-gap: 1rem;
+}
+@media (min-width: 640px) {
+  .masonry-grid { columns: 2; }
+}
+@media (min-width: 1024px) {
+  .masonry-grid { columns: 3; }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
